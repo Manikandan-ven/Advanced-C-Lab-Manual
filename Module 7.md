@@ -1,4 +1,4 @@
-<img width="589" height="197" alt="image" src="https://github.com/user-attachments/assets/5fd999d7-a198-4aa6-b791-09dbe3ea175d" />EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
+EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
 
 Aim:
 To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
@@ -123,6 +123,7 @@ int main() {
 
 
 Output:
+
 <img width="646" height="539" alt="image" src="https://github.com/user-attachments/assets/e94178ed-746c-426a-810d-6168add54730" />
 
 
@@ -278,6 +279,8 @@ int main() {
 
 
 Output:
+
+
 <img width="600" height="306" alt="image" src="https://github.com/user-attachments/assets/ff2f369a-f9e4-459a-b8e1-e3c18cdeb24f" />
 
 
