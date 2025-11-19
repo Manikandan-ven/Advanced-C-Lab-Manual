@@ -84,60 +84,45 @@ Algorithm:
 Program:
 ```
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int n;
+    char a[50];
+    int count[4] = {0, 0, 0, 0}; // To store frequency of digits 0 to 3
+    int i;
 
-    // Step 1 & 2: Input number
-    printf("Enter a number: ");
-    scanf("%d", &n);
+    // Step 2: Input a string of digits
+    printf("Enter a string of digits (0-3): ");
+    scanf("%s", a);
 
-    // Step 3: Switch statement to print corresponding word
-    switch(n) {
-        case 5:
-            printf("seventy one\n");
-            break;
-        case 6:
-            printf("seventy two\n");
-            break;
-        case 7:
-            printf("seventy three\n");
-            break;
-        case 8:
-            printf("seventy four\n");
-            break;
-        case 9:
-            printf("seventy five\n");
-            break;
-        case 10:
-            printf("seventy six\n");
-            break;
-        case 11:
-            printf("seventy seven\n");
-            break;
-        case 12:
-            printf("seventy eight\n");
-            break;
-        case 13:
-            printf("seventy nine\n");
-            break;
-        default:
-            printf("Greater than 13\n");
+    int len = strlen(a);
+
+    // Step 3 & 4: Count frequency of each digit
+    for(i = 0; i < len; i++) {
+        if(a[i] >= '0' && a[i] <= '3') {
+            count[a[i] - '0']++;
+        }
     }
 
-    return 0; // Step 4: Exit program
+    // Step 4 & 5: Print frequency of digits 0 to 3
+    printf("Frequency of digits 0 to 3:\n");
+    for(i = 0; i < 4; i++) {
+        printf("%d ", count[i]);
+    }
+    printf("\n");
+
+    return 0; // Step 6: End
 }
+
 ```
-
-
 
 
 Output:
 
 
-<img width="526" height="212" alt="image" src="https://github.com/user-attachments/assets/1d41bc6e-80a4-4fa3-b1df-f10cad3a9cd4" />
 
 
+<img width="640" height="296" alt="image" src="https://github.com/user-attachments/assets/2211aec9-912d-4c74-a88e-d33a77e8077f" />
 
 
 
@@ -329,7 +314,33 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+
+#include <stdio.h>
+
+// Step 2: Function definition
+int square() {
+    int num, result;
+
+    // Step 3: Input number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Calculate square
+    result = num * num;
+
+    // Return squared value
+    return result;
+}
+
+int main() {
+    int sq;
+
+    // Step 4: Call function and display result
+    sq = square();
+    printf("Square of the number is: %d\n", sq);
+
+    return 0; // Step 5: End
+}
 
 
 
@@ -337,7 +348,7 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="523" height="206" alt="image" src="https://github.com/user-attachments/assets/1fdd9ed4-58f2-45ce-a801-de3ac2dce854" />
 
 
 
