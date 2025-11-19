@@ -13,11 +13,9 @@ Algorithm:
  
 Program:
 
-//type your code here
 
 Output:
 
-//paste your output here
 
 
 
