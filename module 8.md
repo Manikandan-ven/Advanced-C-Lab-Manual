@@ -1,4 +1,75 @@
- 
+
+EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER Aim: To write a C program print the lowercase English word corresponding to the number Algorithm:
+
+Start
+Initialize an integer variable n.
+Input Validation
+Switch Statement cases.
+Case 5: Print "seventy one"
+Case 6: Print "seventy two"
+Case 13: Print "seventy three"
+...
+Case 13: Print "seventy nine"
+Default: Print "Greater than 13"
+Exit the program.
+Program:
+
+```
+
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    // Step 1 & 2: Input number
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    // Step 3: Switch statement to print corresponding word
+    switch(n) {
+        case 5:
+            printf("seventy one\n");
+            break;
+        case 6:
+            printf("seventy two\n");
+            break;
+        case 7:
+            printf("seventy three\n");
+            break;
+        case 8:
+            printf("seventy four\n");
+            break;
+        case 9:
+            printf("seventy five\n");
+            break;
+        case 10:
+            printf("seventy six\n");
+            break;
+        case 11:
+            printf("seventy seven\n");
+            break;
+        case 12:
+            printf("seventy eight\n");
+            break;
+        case 13:
+            printf("seventy nine\n");
+            break;
+        default:
+            printf("Greater than 13\n");
+    }
+
+    return 0; // Step 4: Exit program
+}
+```
+
+Output:
+
+<img width="477" height="191" alt="image" src="https://github.com/user-attachments/assets/cc77e02d-a095-4343-8072-74579d2dfb96" />
+
+
+Result: Thus, the program is verified successfully
+
+
 EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
 Aim:
 To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
@@ -93,16 +164,81 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-//type your code here
+// Function to swap two characters
+void swap(char *x, char *y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
 
+// Function to sort a string in lexicographical order
+void sortString(char *str) {
+    int n = strlen(str);
+    for(int i = 0; i < n-1; i++) {
+        for(int j = i+1; j < n; j++) {
+            if(str[i] > str[j])
+                swap(&str[i], &str[j]);
+        }
+    }
+}
+
+// Function to generate all permutations using recursion
+void permute(char *str, int l, int r) {
+    if(l == r) {
+        printf("%s\n", str);
+    } else {
+        for(int i = l; i <= r; i++) {
+            swap(&str[l], &str[i]);
+            permute(str, l+1, r);
+            swap(&str[l], &str[i]); // backtrack
+        }
+    }
+}
+
+int main() {
+    char *s;
+    int n;
+
+    // Step 4: Input string
+    printf("Enter a string: ");
+    char buffer[100];
+    scanf("%s", buffer);
+
+    n = strlen(buffer);
+
+    // Step 3: Dynamically allocate memory for string
+    s = (char *)malloc((n + 1) * sizeof(char));
+    if(s == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    strcpy(s, buffer);
+
+    // Step 5: Sort string to start permutations in lexicographical order
+    sortString(s);
+    printf("All permutations in lexicographical order:\n");
+    permute(s, 0, n - 1);
+
+    // Step 6: Free allocated memory
+    free(s);
+
+    return 0;
+}
+
+```
 
 
 
 Output:
 
 
-//paste your output here
+<img width="661" height="367" alt="image" src="https://github.com/user-attachments/assets/b5836dcc-53b2-4b52-bb9f-820eb516cbd5" />
+
 
 
 
@@ -127,15 +263,42 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
 
+int main() {
+    int n, i, j, len, min;
 
+    // Step 3: Read the value of n
+    printf("Enter a number N: ");
+    scanf("%d", &n);
 
+    // Step 4: Calculate the side length of the square
+    len = 2 * n - 1;
+
+    // Step 5: Generate the matrix pattern
+    for(i = 0; i < len; i++) {
+        for(j = 0; j < len; j++) {
+            // Step 6: Calculate the minimum distance to borders
+            min = i < j ? i : j;
+            if(len - 1 - i < min) min = len - 1 - i;
+            if(len - 1 - j < min) min = len - 1 - j;
+
+            // Print the corresponding number
+            printf("%d ", n - min);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+```
 
 Output:
 
+<img width="497" height="363" alt="image" src="https://github.com/user-attachments/assets/3ab3cd04-2878-4b0f-8748-ca650d93ac5c" />
 
-//paste your output here
 
 
 
