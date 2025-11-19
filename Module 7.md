@@ -380,8 +380,8 @@ int main() {
 
 Output:
 
+<img width="550" height="437" alt="image" src="https://github.com/user-attachments/assets/29020290-8079-44e2-89a6-7baa5225583f" />
 
-<img width="540" height="289" alt="image" src="https://github.com/user-attachments/assets/fdb9f40e-29fe-4bb2-bf44-49a61d6f66b7" />
 
 
 
