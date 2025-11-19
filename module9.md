@@ -399,6 +399,8 @@ int main() {
 ```
 
 Output:
+
+
 <img width="559" height="338" alt="image" src="https://github.com/user-attachments/assets/bf3f9562-cd3a-41f4-a75d-ac6fea482ad9" />
 
 
@@ -406,5 +408,3 @@ Output:
 
 Result:
 Thus, the function that deletes an element from a queue implemented using an array is verified successfully.
-
-https://colab.research.google.com/drive/1ZDHrPRh7Im6BXH1wW5mAa9ncHzIL5Azt#scrollTo=u15RtX3voAQA
