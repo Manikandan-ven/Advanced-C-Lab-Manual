@@ -15,9 +15,7 @@ Algorithm:
 4.	Exit the program.
  
 Program:
-
-//type your code here
-
+nmmm
 
 
 
