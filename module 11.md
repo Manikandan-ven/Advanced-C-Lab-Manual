@@ -12,11 +12,10 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
+
 
 Output:
-//paste your output here
-
+]
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
 
